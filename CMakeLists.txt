@@ -5,11 +5,24 @@ set(CMAKE_CXX_STANDARD 17)
 # debug版本导出库带d后缀
 set(CMAKE_DEBUG_POSTFIX d)
 
-add_library(yaml-tool SHARED)
+option(YAML_TOOL_BUILD_SHARED_LIBS "Build yaml-tool shared library" ON)
 
+if (YAML_TOOL_BUILD_SHARED_LIBS)
+    set(yaml-tool-type SHARED)
+    set(yaml-tool-label-postfix "shared")
+else()
+    set(yaml-tool-type STATIC)
+    set(yaml-tool-label-postfix "static")
+endif()
+
+add_library(yaml-tool ${yaml-tool-type} "")
+
+# 只有动态库的时候才需要导出宏
+if(YAML_TOOL_BUILD_SHARED_LIBS)
 target_compile_definitions(yaml-tool
         PRIVATE YAML_TOOL_BUILDING_LIBRARY
 ) # 定义导出宏
+endif ()
 
 file(GLOB_RECURSE srcs CONFIGURE_DEPENDS
         "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp"

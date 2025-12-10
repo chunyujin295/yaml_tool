@@ -7,6 +7,6 @@ include(CMakeFindDependencyMacro)
 # 没有运行时依赖
 # 没有编译期接口暴露
 # 用户既不需要 headers，也不需要 targets
-# find_dependency(yaml-cpp)
+find_dependency(yaml-cpp)
 
 include("${CMAKE_CURRENT_LIST_DIR}/yaml_toolTargets.cmake")
