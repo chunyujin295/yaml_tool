@@ -9,7 +9,7 @@
 #ifndef YAMLNODE_H
 #define YAMLNODE_H
 
-#include <export.h>
+#include "export.h"
 #include <memory>
 #include <string>
 #include <typeindex>

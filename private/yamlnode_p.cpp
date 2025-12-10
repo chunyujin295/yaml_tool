@@ -1,5 +1,5 @@
 #include "yamlnode_p.h"
-#include <yamlnode.h>
+#include <yamltool/yamlnode.h>
 
 namespace YamlTool
 {

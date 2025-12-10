@@ -9,7 +9,7 @@
 #ifndef YAMLNODEPIMPL_H
 #define YAMLNODEPIMPL_H
 
-#include <yamlnode.h>
+#include <yamltool/yamlnode.h>
 #include <yaml-cpp/yaml.h>
 
 namespace YamlTool

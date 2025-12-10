@@ -1,4 +1,4 @@
-#include <yamlnode.h>
+#include <yamltool/yamlnode.h>
 #include <fstream>
 #include <yamlnode_p.h>
 namespace YamlTool

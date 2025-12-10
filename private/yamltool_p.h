@@ -9,7 +9,7 @@
 #ifndef COREXI_COMMON_PC_YAMLTOOL_P_H
 #define COREXI_COMMON_PC_YAMLTOOL_P_H
 
-#include <yamltool.h>
+#include <yamltool/yamltool.h>
 #include <mutex>
 #include <yaml-cpp/yaml.h>
 

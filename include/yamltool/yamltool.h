@@ -10,8 +10,8 @@
 #define YAMLTOOL_H
 
 #include <any>
-#include <export.h>
-#include <yamlnode.h>
+#include "export.h"
+#include "yamlnode.h"
 #include <functional>
 
 namespace YamlTool
