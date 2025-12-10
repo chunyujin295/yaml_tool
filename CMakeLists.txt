@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_DEBUG_POSTFIX d)
 
 option(YAML_TOOL_BUILD_SHARED_LIBS "Build yaml-tool shared library" ON)
+option(YAML_TOOL_INSTALL "Install yaml-tool" ON)
 
 if (YAML_TOOL_BUILD_SHARED_LIBS)
     set(yaml-tool-type SHARED)
@@ -57,6 +58,7 @@ set_target_properties(yaml-tool
 
 
 # 发布/安装脚本
+if(YAML_TOOL_INSTALL)
 install(TARGETS yaml-tool
         EXPORT yaml-toolTargets
         RUNTIME DESTINATION bin      # Windows DLL
@@ -79,7 +81,7 @@ install(EXPORT yaml-toolTargets
 #install(TARGETS yaml-cpp
 #        EXPORT yaml-toolTargets
 #)
-
+endif()
 
 
 
